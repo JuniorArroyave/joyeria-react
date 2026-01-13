@@ -1,4 +1,6 @@
 import "./css/NavBar.css"
+import { foto4 } from "img/foto4.png";
+import 'boxicons';
 
 
 
@@ -8,7 +10,7 @@ export const Navbar = () => {
         <div className="content">
             <div className="nav">
                 <div className="logo">
-                    <img className="imagelogo" src="src/components/elements/nav/img/foto4.png" alt="Logo" />
+                    <img className="imagelogo" src={foto4} alt="Logo" />
                 </div>
 
                 <div className="title">Joyeria</div>

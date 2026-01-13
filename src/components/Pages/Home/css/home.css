@@ -1,0 +1,75 @@
+.botones-home {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.btn-home {
+    padding: 10px 16px;
+    border: 1px solid #b2b2b2;
+    border-radius: 7px;
+    background-color: #ecececd8;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.botones-home input:hover {
+    background-color: #d1d1d1d8;
+}
+
+.botones-home-wrapper {
+    position: relative;
+}
+
+/*------------Carrusel Responsive---------------*/
+
+@media (max-width: 768px) {
+    .botones-home {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 10px 20px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .botones-home::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btn-home {
+        flex: 0 0 34%;
+        scroll-snap-align: center;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .botones-home-wrapper::before,
+    .botones-home-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+     .botones-home-wrapper::before {
+        left: 0;
+        background: linear-gradient(
+            to right,
+            #f5f5f5 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+    .botones-home-wrapper::after {
+        right: 0;
+        background: linear-gradient(
+            to left,
+            #f5f5f5 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+}

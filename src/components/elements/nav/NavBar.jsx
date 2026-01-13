@@ -1,5 +1,5 @@
 import "./css/NavBar.css"
-import { foto4 } from "img/foto4.jpg";
+import { foto4 } from "/img/foto4.jpg";
 import 'boxicons';
 
 

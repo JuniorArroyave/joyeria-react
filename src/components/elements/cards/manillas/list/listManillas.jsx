@@ -1,6 +1,6 @@
 const manillasList = [
     {
-        imagenBase: "src/components/elements/cards/manillas/img/manilla-color",
+        imagenBase: "../img/manilla-color",
         titulo: "Manilla 1",
         descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         colores: ["negro", "rojo", "dorado", "lila", "verde", "azul"]

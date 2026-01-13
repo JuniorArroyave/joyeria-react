@@ -5,12 +5,10 @@ export const ManillaCard = ({ manilla }) => {
         manilla.colores[0]
     );
 
-    const imageSrc = `${manilla.imagenBase}-${colorSeleccionado}.jpg`;
-
     return (
         <div className="card">
             <img
-                src={imageSrc}
+                src={`${manilla.imagenBase}-${colorSeleccionado}.jpg`}
                 alt={`${manilla.titulo} color ${colorSeleccionado}`}
                 className="card-image"
             />

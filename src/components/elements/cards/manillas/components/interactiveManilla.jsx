@@ -8,7 +8,7 @@ export const ManillaCard = ({ manilla }) => {
     return (
         <div className="card">
             <img
-                src={`public/imgManillas/manillacolor${colorSeleccionado}.jpg`}
+                src={`../../../../../../public/imgManillas/manillacolor${colorSeleccionado}.jpg`}
                 alt={`${manilla.titulo} color ${colorSeleccionado}`}
                 className="card-image"
             />

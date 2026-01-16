@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { PedidoModal } from "../../../../Modal/pedidoModal.jsx";
 
-export const CadenaCard = ({ cadena }) => {
+export const DijesCard = ({ dijes }) => {
     const [colorSeleccionado, setColorSeleccionado] = useState(
-        cadena.colores[0]
+        dijes.colores[0]
     );
 
     const [mostrarModal, setMostrarModal] = useState(false);
@@ -12,19 +12,19 @@ export const CadenaCard = ({ cadena }) => {
         <>
             <div className="card">
                 <img
-                    src={`${cadena.imagenBase}-${colorSeleccionado}.jpg`}
-                    alt={`${cadena.titulo} color ${colorSeleccionado}`}
+                    src={`${dijes.imagenBase}-${colorSeleccionado}.jpg`}
+                    alt={`${dijes.titulo} color ${colorSeleccionado}`}
                     className="card-image"
                 />
 
                 <div className="card-content">
-                    <h2 className="card-title">{cadena.titulo}</h2>
-                    <p className="card-description">{cadena.descripcion}</p>
+                    <h2 className="card-title">{dijes.titulo}</h2>
+                    <p className="card-description">{dijes.descripcion}</p>
 
                     <div className="card-colors">
                         <span>Colores disponibles:</span>
                         <div className="colors">
-                            {cadena.colores.map((color, i) => (
+                            {dijes.colores.map((color, i) => (
                                 <span
                                     key={i}
                                     className={`color ${color} ${color === colorSeleccionado ? "active" : ""
@@ -50,7 +50,7 @@ export const CadenaCard = ({ cadena }) => {
             <PedidoModal
     visible={mostrarModal}
     onClose={() => setMostrarModal(false)}
-    producto={cadena.titulo}
+    producto={dijes.titulo}
     color={colorSeleccionado}
     tallas={["S", "M", "L"]}
 />

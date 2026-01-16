@@ -1,8 +1,7 @@
 import { useRef } from "react";
 import "boxicons";
-import "./css/cadenas.css";
-import cadenasList from "./list/listCadenas.jsx";
 import { CadenaCard } from "./components/interactiveCadena.jsx";
+import cadenasList from "./list/listCadenas.jsx";
 
 export const Cadenas = () => {
     const carruselRef = useRef(null);

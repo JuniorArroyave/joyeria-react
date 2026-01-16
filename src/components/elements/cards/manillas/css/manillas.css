@@ -71,6 +71,8 @@
 
 .colors {
     display: flex;
+    gap: 5px;
+    margin-top: 8px;
 }
 
 .color.active {
@@ -173,6 +175,13 @@
     width: 100%;
     margin-top: 8px;
     padding: 8px;
+}
+
+.input-cantidad {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
 }
 
 .modal-actions {

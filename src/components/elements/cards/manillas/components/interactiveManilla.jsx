@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PedidoModal } from "./pedidoModal.jsx";
+import { PedidoModal } from "../../../../Modal/pedidoModal.jsx";
 
 export const ManillaCard = ({ manilla }) => {
     const [colorSeleccionado, setColorSeleccionado] = useState(
@@ -27,9 +27,8 @@ export const ManillaCard = ({ manilla }) => {
                             {manilla.colores.map((color, i) => (
                                 <span
                                     key={i}
-                                    className={`color ${color} ${
-                                        color === colorSeleccionado ? "active" : ""
-                                    }`}
+                                    className={`color ${color} ${color === colorSeleccionado ? "active" : ""
+                                        }`}
                                     onClick={() => setColorSeleccionado(color)}
                                 />
                             ))}
@@ -44,15 +43,18 @@ export const ManillaCard = ({ manilla }) => {
                     >
                         Hacer Pedido
                     </button>
+
                 </div>
             </div>
 
             <PedidoModal
-                visible={mostrarModal}
-                onClose={() => setMostrarModal(false)}
-                manilla={manilla}
-                colorSeleccionado={colorSeleccionado}
-            />
+    visible={mostrarModal}
+    onClose={() => setMostrarModal(false)}
+    producto={manilla.titulo}
+    color={colorSeleccionado}
+    tallas={["S", "M", "L"]}
+/>
+
         </>
     );
 };

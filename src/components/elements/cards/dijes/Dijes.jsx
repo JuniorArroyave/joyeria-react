@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "boxicons";
-import { DijesCard } from "./components/interactiveCadena.jsx";
+import { DijesCard } from "./components/interactivedijes.jsx";
 import dijesList from "./list/listDijes.jsx";
 
 export const Dijes = () => {
